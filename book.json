@@ -1,0 +1,17 @@
+{
+	"title": "cqtju",  
+	"author": "cqtju", 
+	"description": "xxx", 
+	"plugins": [
+	  "mathjax-pro"
+	],    
+	"styles": { 
+	  "website": "styles/website.css"
+	},
+	"pluginsConfig": {},  
+	"links" : {
+	  "sidebar" : {  
+		"Test" : "/test/"
+	  }
+	}
+  }
