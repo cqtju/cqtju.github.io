@@ -19,28 +19,28 @@ $$
 e(x) \\
 e(y) \\
 e(yaw) \\ 
-\end{bmatrix}
-= 
+\end{bmatrix} = 
 \begin{bmatrix}
 x_i \\
 y_i \\
 yaw_i \\
-\end{bmatrix}
--
+\end{bmatrix} -
 \begin{bmatrix}
 x_j \\
 y_j \\
 yaw_j \\
 \end{bmatrix}
 $$
+
 $$
-J_i = \frac{\delta(e)}{\delta(X_i)}=
+J_i = \frac{\delta(e)}{\delta(X_i)} =
 \begin{bmatrix}
 1 & 0 &0 \\
 0 & 1 & 0 \\
 0 & 0 & 1 \\
 \end{bmatrix}
 $$
+
 $$
 J_j = \frac{\delta(e)}{\delta(X_j)}=
 \begin{bmatrix}
@@ -53,15 +53,13 @@ $$
 ## 视觉测量误差
 
 ### 原始表达形式
+
 $$
-P_l^{c_j} = R_b^c(
-R_w^{b_j}(R^w_{b_i}
-(R_c^b\frac{P_l^{c_i}}{\lambda_l} + p_c^b)
-+ p^w_{b_i} - p^w_{b_j})
-- p_c^b)
+P_l^{c_j} = R_b^c( R_w^{b_j}(R^w_{b_i} (R_c^b\frac{P_l^{c_i}}{\lambda_l} + p_c^b) + p^w_{b_i} - p^w_{b_j}) - p_c^b)
 $$
 
 ### 齐次表达形式
+
 $$
 P_l^{c_j} = T_b^c T_w^{b_j} T^w_{b_i} T_c^b\frac{P_l^{c_i}}{\lambda_l} 
 $$
@@ -73,7 +71,9 @@ $$
 $$
 P_l^{c_j} = T_b^c T_w^{b_j} {P_l^w} 
 $$
+
 ### 重投影误差项
+
 $$
 e = 
 \frac {P_l^{cj}} {z_j} -
@@ -81,6 +81,7 @@ e =
 $$
 
 ### 重投影误差项 关于 $P_l^{c_j}$的偏导数
+
 $$
 \frac {\partial(e)}{\partial(P_l^{c_j})}
 = \begin{bmatrix}
@@ -104,6 +105,7 @@ $$
 $$
 
 ### $(P_l^{c_j})$ 关于 $(p^w_{b_i})$的偏导数
+
 $$
 \frac{\partial(P_l^{c_j})}{\partial(p_l^{c_i})}
 = R_b^c R_w^{b_j} 
@@ -112,6 +114,7 @@ $$
 
 
 ### $(P_l^{c_j})$ 关于 $(R^w_{b_i})$的展开公式
+
 $$
 P_l^{c_j} = R_w^{c_j} (R^w_{b_i} {P_l^{b_i}} + p^w_{b_i}) + p_w^{c_j} 
 \\ = R_w^{c_j} 
@@ -168,6 +171,7 @@ R_{w33}^{c_j}
 $$
 
 ### $(P_l^{c_j})$ 关于 $(R^w_{b_i})$的偏导数
+
 $$
 \frac{\partial(P_l^{c_j})}{\partial(R^w_{b_i})}
 =   \begin{bmatrix}
@@ -238,6 +242,7 @@ $$
 
 设$X=(x,y,\theta)$
 ### 3Dof 关于$X^w_{b_i}$的雅克比公式
+
 $$
 \frac{\partial(e)}{\partial(X^w_{b_i})}
 =
@@ -270,6 +275,7 @@ $$
 
 
 ### $(P_l^{c_j})$ 关于 $(p^w_{b_j})$的偏导数
+
 $$
 \frac{\partial(P_l^{c_j})}{\partial(p_w^{b_j})}
 = - R_b^c R_w^{b_j} 
@@ -277,6 +283,7 @@ $$
 
 
 ### $(P_l^{c_j})$ 关于 $(R_w^{b_j})$的展开公式
+
 $$
 P_l^{c} = T_b^c T_w^{b_j} {P_l^w} 
 $$
@@ -338,6 +345,7 @@ R_{b33}^{c}
 $$
 
 ### $(P_l^{c})$ 关于 $(R_w^{b_j})$的偏导数
+
 $$
 \frac{\partial(P_l^{c})}{\partial(R^{b_j}_{w})}
 =   \begin{bmatrix}
@@ -392,6 +400,7 @@ $$
 
 
 ### $(P_l^{c})$ 关于 $(R^w_{b_j})$的偏导数
+
 $$
 \frac{\partial(P_l^{c})}{\partial(R^{w}_{b_j})}
 =   \begin{bmatrix}
@@ -491,6 +500,7 @@ xR_b^c & yR_b^c & zR_b^c
 $$
 
 ### 3Dof 关于$X^w_{b_j}$的雅克比公式
+
 $$
 \frac{\partial(e)}{\partial(X^w_{b_j})}
 =
@@ -523,6 +533,7 @@ $$
 
 
 ### 原始表达形式
+
 $$
 \frac{\partial(P_l^{c_j} )}
 {\partial{\lambda_l}}
